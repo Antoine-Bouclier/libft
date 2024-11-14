@@ -9,6 +9,7 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJS)
+	$(AR) $@ $^
 
 clean:
 	rm -rf $(OBJS)
