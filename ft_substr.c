@@ -1,51 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouclie <abouclie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 10:03:40 by abouclie          #+#    #+#             */
-/*   Updated: 2024/11/21 08:53:00 by abouclie         ###   ########.fr       */
+/*   Created: 2024/11/19 09:31:23 by abouclie          #+#    #+#             */
+/*   Updated: 2024/11/20 14:42:19 by abouclie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	char	*str;
 
-	i = 0;
-	if (*little == '\0')
-		return ((char *)big);
-	if (len == 0)
+	if (!s)
 		return (NULL);
-	else if (len > ft_strlen(big))
-		len = ft_strlen(big);
-	while (big[i] != '\0' && i < len)
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	str = ft_calloc(len + 1, sizeof(char));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < len)
 	{
-		j = 0;
-		while (big[i + j] == little[j] && (i + j) < len)
-		{
-			j++;
-		}
-		if (little[j] == '\0')
-		{
-			return ((char *)(big + i));
-		}
+		str[i] = s[start + i];
 		i++;
 	}
-	return (NULL);
+	return (str);
 }
 
 // #include <stdio.h>
 // #include <string.h>
-// int  main()
+// int	main()
 // {
-//     char *big = "aaxx";
-//     char *little = "xx";
-
-//     printf("%s", ft_strnstr(big, little, 5));
+// 	printf("%s", ft_substr("hello comment tu vas ?", 50, 5));
 // }

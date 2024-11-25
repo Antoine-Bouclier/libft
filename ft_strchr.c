@@ -1,25 +1,31 @@
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouclie <abouclie@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/07 10:04:24 by abouclie          #+#    #+#             */
+/*   Updated: 2024/11/19 07:32:02 by abouclie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
-    const char    *str;
+	int		i;
+	char	cc;
 
-    str = s;
-    while (*str != '\0')
-    {
-        if (*str == c)
-            return ((char *)str);
-        *str++;
-    }
-    return (NULL);
-}
-
-#include <stdio.h>
-int main()
-{
-    char    s[] = "Salut comment tu vas ?";
-    char    c = 'a';
-    char    *result = ft_strchr(s, c);
-    printf("%s\n", result);
-
+	i = 0;
+	cc = (char) c;
+	while (s[i])
+	{
+		if (s[i] == cc)
+			return ((char *) &s[i]);
+		i++;
+	}
+	if (s[i] == cc)
+		return ((char *) &s[i]);
+	return (NULL);
 }

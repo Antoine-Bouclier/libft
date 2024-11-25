@@ -1,27 +1,24 @@
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouclie <abouclie@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/12 09:53:53 by abouclie          #+#    #+#             */
+/*   Updated: 2024/11/18 15:53:40 by abouclie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_bzero(void *s, size_t n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char	*dest;
+	unsigned char	*dest;
 	size_t			i;
 
 	dest = s;
 	i = 0;
 	while (i++ < n)
-	*dest++ = 0;
-}
-
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-    char str1[25] = "hello how are you doing ?";
-    char str2[25] = "hello how are you doing ?";
-
-    bzero(str1 + 8, 1);
-    printf("native : %s\n", str1);
-
-    ft_bzero(str2 + 8, 14);
-    printf("homemade : %s\n", str2);
-    return 0;
+		*dest++ = 0;
 }
