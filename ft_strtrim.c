@@ -6,7 +6,7 @@
 /*   By: abouclie <abouclie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:49:32 by abouclie          #+#    #+#             */
-/*   Updated: 2024/11/20 14:43:19 by abouclie         ###   ########.fr       */
+/*   Updated: 2024/11/27 09:52:37 by abouclie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	end;
 
 	start = 0;
+	if (set == NULL)
+		return ((char *)s1);
 	end = ft_strlen(s1) - 1;
 	if (ft_strlen(s1) == '\0')
 		return (ft_strdup(""));
@@ -62,12 +64,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (res(s1, start, end - (start - 1)));
 }
-
-// #include <stdio.h>
-// int	main()
-// {
-// 	char	*s1 = "abababababAntoineababababa";
-// 	char	*set = "";
-
-// 	printf("%s", ft_strtrim(s1, set));
-// }

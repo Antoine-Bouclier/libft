@@ -6,7 +6,7 @@
 /*   By: abouclie <abouclie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:31:23 by abouclie          #+#    #+#             */
-/*   Updated: 2024/11/20 14:42:19 by abouclie         ###   ########.fr       */
+/*   Updated: 2024/11/26 10:47:12 by abouclie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (str);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int	main()
-// {
-// 	printf("%s", ft_substr("hello comment tu vas ?", 50, 5));
-// }

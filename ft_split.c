@@ -6,7 +6,7 @@
 /*   By: abouclie <abouclie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:57:13 by abouclie          #+#    #+#             */
-/*   Updated: 2024/11/21 09:22:31 by abouclie         ###   ########.fr       */
+/*   Updated: 2024/11/26 10:46:24 by abouclie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,14 +105,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (str);
 }
-// #include <stdio.h>
-// int	main()
-// {
-// 	int	i = 0;
-// 	char	**tabstr = ft_split("\0aa\0bbb", '\0');
-//     while (tabstr[i] != NULL)
-//     {
-//         printf("%s\n", (tabstr[i]));
-//         i++;
-//     }
-// }

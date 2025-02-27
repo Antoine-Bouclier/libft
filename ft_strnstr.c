@@ -6,7 +6,7 @@
 /*   By: abouclie <abouclie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:03:40 by abouclie          #+#    #+#             */
-/*   Updated: 2024/11/21 08:53:00 by abouclie         ###   ########.fr       */
+/*   Updated: 2024/11/26 10:46:48 by abouclie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int  main()
-// {
-//     char *big = "aaxx";
-//     char *little = "xx";
-
-//     printf("%s", ft_strnstr(big, little, 5));
-// }

@@ -6,7 +6,7 @@
 /*   By: abouclie <abouclie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 09:45:22 by abouclie          #+#    #+#             */
-/*   Updated: 2024/11/18 16:11:15 by abouclie         ###   ########.fr       */
+/*   Updated: 2025/02/27 07:52:39 by abouclie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ char	*ft_strdup(const char *s)
 
 	dest = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (dest == 0)
-	{
 		return (0);
-	}
 	i = 0;
 	while (s[i] != '\0')
 	{
